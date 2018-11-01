@@ -1,13 +1,16 @@
 package com.revature.model;
+import java.util.Random;
+import com.revature.exception.LostTrackOfTimeException;
 
 public class PostMeridiam8 extends LeisureTime implements DinnerTime {
-	boolean isLate = false;
-	boolean hadFun = false;
-	String foodEaten = "delicious H2O";
+	boolean isLate;
+	boolean hadFun;
+	String foodEaten;
 	
 	
 	//overloaded constructor 1
 	public PostMeridiam8 (String foodEaten, boolean hadFun) {
+		this.isLate = false;
 		this.hadFun = hadFun;
 		this.foodEaten = foodEaten;
 	}
@@ -19,9 +22,13 @@ public class PostMeridiam8 extends LeisureTime implements DinnerTime {
 			this.foodEaten = "the usual";
 		}
 	}
-	public static void main() {
-		
+	
+	public PostMeridiam8 () {
+		isLate = false;
+		hadFun = false;
+		foodEaten = "delicious H2O";
 	}
+
 	@Override
 	public void eatFood() {
 		// TODO Auto-generated method stub
@@ -30,11 +37,19 @@ public class PostMeridiam8 extends LeisureTime implements DinnerTime {
 		System.out.println(message);
 	}
 	@Override
-	public void playGames() {
+	public void playGames() throws LostTrackOfTimeException {
 		// TODO Auto-generated method stub
 		String message;
+		message = this.isLate ? "Glad I got to play some games today" : "No time to play, gotta go to sleep!";
 		
-		message = this.isLate ? "Glad I got to play some games today" : "No time to play, gotta go to sleep!";                                
+		Random rngesus = new Random();
+		boolean lostTrack = rngesus.nextBoolean();
+		message = lostTrack ? "Oh no! It's already 3am!" : message;
+		
 		System.out.println(message);
+		
+		if (lostTrack) {
+			throw new LostTrackOfTimeException("There goes my sleep.");
+		}
 	}
 }
