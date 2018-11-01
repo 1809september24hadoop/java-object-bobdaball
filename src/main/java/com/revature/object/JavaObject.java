@@ -22,4 +22,6 @@ public class JavaObject {
 	 * 
 	 * P.S.: Don't forget to have this assignment under Java_Assignments folder.
 	**/
+	
+	
 }
