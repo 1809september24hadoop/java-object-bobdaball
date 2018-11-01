@@ -9,7 +9,7 @@ public class JavaObject {
 	 * -- Provide three attributes to this POJO and two overloaded constructors besides the
 	 * no args constructor.
 	 * - Feel free to add more characters to your story.
-	 * - An Interface and an Abstract Class which your POJO(s) will implement and/or extend.
+	 * - An Interface and an Abstract Class which your PO JO(s) will implement and/or extend.
 	 * -- Add some fun methods in there.
 	 * - Two custom exceptions, one extending from Exception and the other one extending
 	 * from RuntimeException. These will be thrown in the story.
@@ -22,6 +22,4 @@ public class JavaObject {
 	 * 
 	 * P.S.: Don't forget to have this assignment under Java_Assignments folder.
 	**/
-	
-	
 }
