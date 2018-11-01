@@ -33,18 +33,21 @@ public class PostMeridiam8 extends LeisureTime implements DinnerTime {
 	public void eatFood() {
 		// TODO Auto-generated method stub
 		String message;
-		message = this.isLate ? "Yum yum! " + this.foodEaten + " tastes wonderful" : "Don't have time to eat :(";
+		message = !this.isLate ? "Yum yum! " + this.foodEaten + " tastes wonderful" : "Don't have time to eat :(";
 		System.out.println(message);
 	}
 	@Override
 	public void playGames() throws LostTrackOfTimeException {
 		// TODO Auto-generated method stub
 		String message;
-		message = this.isLate ? "Glad I got to play some games today" : "No time to play, gotta go to sleep!";
+		message = !this.isLate ? "Glad I got to play some games today" : "No time to play, gotta go to sleep!";
 		
 		Random rngesus = new Random();
 		boolean lostTrack = rngesus.nextBoolean();
-		message = lostTrack ? "Oh no! It's already 3am!" : message;
+		
+		if (!this.isLate) {
+			message = lostTrack ? "Oh no! It's already 3am!" : message;
+		}
 		
 		System.out.println(message);
 		
