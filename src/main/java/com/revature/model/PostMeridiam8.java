@@ -25,11 +25,16 @@ public class PostMeridiam8 extends LeisureTime implements DinnerTime {
 	@Override
 	public void eatFood() {
 		// TODO Auto-generated method stub
-		
+		String message;
+		message = this.isLate ? "Yum yum! " + this.foodEaten + " tastes wonderful" : "Don't have time to eat :(";
+		System.out.println(message);
 	}
 	@Override
 	public void playGames() {
 		// TODO Auto-generated method stub
+		String message;
 		
+		message = this.isLate ? "Glad I got to play some games today" : "No time to play, gotta go to sleep!";                                
+		System.out.println(message);
 	}
 }
