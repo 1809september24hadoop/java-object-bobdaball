@@ -13,15 +13,12 @@ import java.util.Random;
 public class Driver {
 
 	
-//	private static final Logger LOGGER = Logger.getLogger(Driver.class);
 	private static Scanner scanner = new Scanner(System.in);
 	
 	
 	public static void main(String[] args) throws LostTrackOfTimeException {
 		System.out.println("And today's another day for Fred Sleepman, a man who struggles to have fun, eat well, and sleep enough at the same time");
 		System.out.println("How will today go for him? Let's find out!");
-//		System.out.print("your name?");
-//		String inputName = scanner.nextLine();
 		
 		Random rnGesus = new Random();
 		
